@@ -1,0 +1,28 @@
+
+type Mutation {
+
+	createCar(car:CarInput):Car
+	deleteCarById(car_id:ID!):[Car]
+}
+
+type Query {
+
+	getAllCars:[Car]
+	getCarById(car_id:Int):Car
+	
+}
+
+type Car {
+
+	car_id:ID!
+	model:String
+	transmission:String
+	type:String
+	
+}
+
+input CarInput {
+	model:String
+	transmission:String
+	type:String	
+}
